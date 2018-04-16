@@ -1,0 +1,31 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.3.83:8761/eureka/
+
+server:
+  port: 8700
+
+spring:
+  application:
+    name: app-user
+
+  datasource:
+    url: jdbc:mysql://192.168.3.83:3306/easyshop?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: root
+    driverClassName: com.mysql.jdbc.Driver
+
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*Mapper.xml
+
+logging:
+  level:
+    com.tgzn.app.appuser.mapper: debug
+
+
